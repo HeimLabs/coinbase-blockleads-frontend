@@ -1,0 +1,17 @@
+@import "../../styles/variables";
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+
+    img {
+        height: 56px;
+        width: auto;
+
+        @media (max-width: 950px) {
+            height: 40px;
+        }
+    }
+}

@@ -66,7 +66,7 @@ export default function Form() {
                             <input
                                 value={address}
                                 type="text"
-                                placeholder="Enter Wallet Address"
+                                placeholder="Enter 0x / ENS Address"
                                 required
                                 disabled={isPending}
                                 onChange={(e) => { setAddress(e.target.value as string) }}

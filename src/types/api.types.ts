@@ -5,3 +5,7 @@ export type User = {
 }
 
 export type SubmitRequest = User
+
+export type SubmitResponse = {
+    transactionLink: string
+}

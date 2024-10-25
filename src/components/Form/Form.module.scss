@@ -49,11 +49,20 @@
             font-weight: 200;
         }
 
-        .disclaimer {
-            font-size: small;
-            font-weight: 200;
-            color: gray;
+        .disclaimerContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            // gap: 5px;
+
+            .disclaimer {
+                font-size: small;
+                font-weight: 200;
+                color: gray;
+            }
         }
+
 
         .row {
             display: flex;

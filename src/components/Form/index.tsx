@@ -76,7 +76,10 @@ export default function Form() {
                     <button type="submit" disabled={isPending} className={`${isPending ? styles.loading : ""}`}>
                         Claim USDC
                     </button>
-                    <span className={styles.disclaimer}>*Limit one reward per user</span>
+                    <div className={styles.disclaimerContainer}>
+                        <span className={styles.disclaimer}>*Limit one reward per user</span>
+                        <span className={styles.disclaimer}>*Transactions are on Base Sepolia testnet</span>
+                    </div>
                 </div>
             </form>
         );

@@ -3,11 +3,11 @@ import { submitForm } from "../api";
 import { toast } from "react-toastify";
 import { useState } from "react";
 
-export const useSubmitForm = (name: string, email: string, address: string) => {
+export const useSubmitForm = (name: string, address: string) => {
     const [transactionLink, setTransactionLink] = useState<string>();
 
     const mutation = useMutation({
-        mutationFn: async () => submitForm({ name, email, address }),
+        mutationFn: async () => submitForm({ name, address }),
         onSuccess: (data) => setTransactionLink(data.data.transactionLink)
     });
 

@@ -5,10 +5,9 @@ import { useSubmitForm } from "../../hooks/useSubmitForm";
 
 export default function Form() {
     const [name, setName] = useState<string>("");
-    const [email, setEmail] = useState<string>("");
     const [address, setAddress] = useState<string>("");
 
-    const { submitForm, isPending, isSuccess, transactionLink } = useSubmitForm(name, email, address);
+    const { submitForm, isPending, isSuccess, transactionLink } = useSubmitForm(name, address);
 
     const handleSubmit = (e: React.SyntheticEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -44,17 +43,6 @@ export default function Form() {
                             required
                             disabled={isPending}
                             onChange={(e) => { setName(e.target.value as string) }}
-                        />
-                    </div>
-                    <div className={styles.row}>
-                        <span>Email</span>
-                        <input
-                            value={email}
-                            type="email"
-                            placeholder="Enter Email Address"
-                            required
-                            disabled={isPending}
-                            onChange={(e) => { setEmail(e.target.value as string) }}
                         />
                     </div>
                     <div className={styles.row}>

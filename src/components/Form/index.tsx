@@ -4,7 +4,7 @@ import { baseLogo, etherscanLogo, successIcon } from "../../assets";
 import { useSubmitForm } from "../../hooks/useSubmitForm";
 
 export default function Form() {
-    const [name, setName] = useState<string>("");
+    const [name, setName] = useState<string>("John Smith");
     const [address, setAddress] = useState<string>("");
 
     const { submitForm, isPending, isSuccess, transactionLink } = useSubmitForm(name, address);
@@ -41,7 +41,7 @@ export default function Form() {
                             type="text"
                             placeholder="Enter Full Name"
                             required
-                            disabled={isPending}
+                            disabled
                             onChange={(e) => { setName(e.target.value as string) }}
                         />
                     </div>
@@ -61,6 +61,7 @@ export default function Form() {
                             />
                         </div>
                     </div>
+                    <span className={styles.disclaimer}>I agree (or if located in the EEA/UK, I have read) the <a href="https://www.coinbase.com/legal/privacy" target="__blank">Privacy Policy</a>.</span>
                     <button type="submit" disabled={isPending} className={`${isPending ? styles.loading : ""}`}>
                         Claim USDC
                     </button>

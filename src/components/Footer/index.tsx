@@ -7,6 +7,9 @@ export default function Footer() {
             <a href="https://docs.cdp.coinbase.com/mpc-wallet/docs/welcome" target="__blank">
                 <img src={coinbaseBadge} alt="Powered by Coinbase MPC Wallets" />
             </a>
+            <a href="https://www.coinbase.com/legal/privacy" target="__blank">
+                Coinbase Global Privacy Policy
+            </a>
         </div>
     );
 }
